@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <marquee id="move" behavior="" direction="">Please play in FullScreen mode for better gameplay</marquee>
+    <div id="heartsDisplay">
+        <div id="heartsContainer">
+            <span>Hearts:</span>
+            <div id="heartContainer">
+                <img class="heart" src="../asset/heart.png" alt="Heart">
+                <img class="heart" src="../asset/heart.png" alt="Heart">
+                <img class="heart" src="../asset/heart.png" alt="Heart">
+            </div>
+        </div>
+    </div>
+    <div id="pointsDisplay">Points: <span id="points">0</span></div>
+
+    <div id="centerBox">
+        <div id="msg1">
+            <h1>Welcome to SDG6 Quest Game</h1>
+            <p>Do you wish to learn more about SDG6 before starting your adventure?</p>
+        </div>
+        <form id="gameForm">
+            <input type="radio" id="yes" name="choice" value="yes" required="required">
+            <label for="yes">Yes, tell me more about SDG6</label><br>
+            <input type="radio" id="no" name="choice" value="no" required="required">
+            <label for="no">No, I'm ready to start my adventure</label><br>
+            <input type="submit" value="Submit" id="submitButton">
+        </form>
+        <body id="leaderOption">
+            <form id="additionalChoiceF" style="display: none;">
+                <div id="additionalOptions">
+                    <p>You are the leader of a small village facing water challenges. Your first task is to address the water quality in your village. What will you do?</p>
+                    <input type="radio" id="option1" name="additionalChoice" value="option1" required="required">
+                    <label for="option1">Educate the villagers about sanitation and hygiene practices</label><br>
+                    <input type="radio" id="option2" name="additionalChoice" value="option2" required="required">
+                    <label for="option2">Ignore the problem. It doesn't seem serious</label><br>
+                    <input type="submit" value="Submit" id="additionalSubmitButton">
+                </div>
+            </form>
+        </body>
+        <form id="additionalChoiceI" style="display: none;">
+            <div id="additionalOptions1">
+                <p>The river that supplies water to your village is being polluted. What's your plan to tackle this?</p>
+                <input type="radio" id="option3" name="additionalChoice1" value="option3" required="required">
+                <label for="option3">Work with local industries to reduce pollution</label><br>
+                <input type="radio" id="option4" name="additionalChoice1" value="option4" required="required">
+                <label for="option4">Create a filtration system for the village</label><br>
+                <input type="submit" value="Submit" id="additionalSubmitButton1">
+            </div>
+        </form>
+        <form id="additionalChoiceJ" style="display: none;">
+            <div id="additionalOptions2">
+                <p>A drought has hit your region, and water is scarce. How will you ensure your village has enough water?</p>
+                <input type="radio" id="option5" name="additionalChoice2" value="option5" required="required">
+                <label for="option5">Implement water-saving techniques and rainwater harvesting.</label><br>
+                <input type="radio" id="option6" name="additionalChoice2" value="option6" required="required">
+                <label for="option6">Ration the existing water supply without seeking alternatives.</label  ><br>
+                <input type="submit" value="Submit" id="additionalSubmitButton2">
+            </div>
+        </form>
+        <form id="additionalSubChoiceA" style="display: none;">
+            <div id="additionalSubChoice">
+                <p>Would you like to learn importance of clean of water?</p>
+                <input type="radio" id="option1.1" name="additionalSubChoice" value="option1.1" required="required">
+                <label for="option1.1">Yes</label><br>
+                <input type="radio" id="option1.2" name="additionalSubChoice" value="option1.2" required="required">
+                <label for="option1.2">No</label><br>
+                <input type="submit" value="Submit" id="additionalSubChoiceSubmitButton">
+            </div>
+        </form>
+        <div id="response"></div>
+        <div id="response1"></div>
+        <div id="response2"></div>
+        <div id="response3"></div>
+        <div id="response1.1"></div>
+        <button id="continueButton0" style="display: none;">Continue</button>
+        <button id="continueButton" style="display: none;">Continue</button>
+        <button id="continueButton1" style="display: none;">Continue</button>
+        <button id="continueButton2" style="display: none;">Continue</button>
+        <button id="continueButton3" style="display: none;">Continue</button>
+        <button id="continueSubChoiceButton" style="display: none;">Continue</button>
+    </div>
+    <div id="gameOverScreen" style="display: none;">
+        <h1>Game Over!</h1>
+        <p>Your hearts have run out. Do you want to restart or go to the homepage?</p>
+        <button id="restartButton">Restart</button>
+        <button id="homepageButton">Homepage</button>
+    </div>
+    
+    <script src="game.js"></script>
+    <button id="fullscreenButton">Fullscreen</button>
+</body>
+</html>

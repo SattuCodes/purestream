@@ -18,6 +18,9 @@ function addPoints(option) {
         case 'option1.1':
             points += 10;
             break;
+        case 'option2.1':
+            points += 10;
+            break;
     }
     document.getElementById("points").textContent = points;
 }
@@ -162,7 +165,21 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("continueButton").style.display = "block";
         }
     })
-
+    document.getElementById("additionalSubChoiceB").addEventListener("submit",  function(event){
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const choice = formData.get("additionalSubChoice1");
+        console.log("Received choice:", choice);
+        document.getElementById("additionalSubChoiceSubmitButton1").disabled = true;
+        addPoints(choice);
+        if (choice.toLowerCase() == 'option2.1'){
+            showSubResult1("1. **Reduce Water Usage**: Every drop counts. Use water-saving fixtures and harvest rainwater.2. **Proper Waste Disposal**: Dispose of hazardous waste properly to prevent contamination.3. **Natural Cleaning Products**: Use eco-friendly products to keep harmful chemicals out of our water.4. **Plant Trees**: Trees absorb pollutants and reduce runoff into water bodies.5. **Support Green Infrastructure**: Advocate for sustainable water management in our community.");
+            document.getElementById("continueButton1").style.display = "block";
+        }
+        else{
+            document.getElementById("continueButton1").style.display = "block";
+        }
+    })
     function showResult(result) {
         document.getElementById("response").innerHTML = "";
         let i = 0;
@@ -237,6 +254,20 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("response1.1").style.fontSize = "30px";
         document.getElementById("response1.1").style.fontFamily = "'VT323', monospace";
     }
+    function showSubResult1(result){
+        document.getElementById("response2.1").innerHTML = "";
+        let i = 0;
+        const interval = setInterval(function() {
+            if (i < result.length) {
+                document.getElementById("response2.1").innerHTML += result[i];
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 30);
+        document.getElementById("response2.1").style.fontSize = "30px";
+        document.getElementById("response2.1").style.fontFamily = "'VT323', monospace";
+    }
     function hideOptionsAndResult() {
         document.getElementById("msg1").style.display = "none";
         document.getElementById("gameForm").style.display = "none";
@@ -271,9 +302,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const additionalSubChoice = document.getElementById("additionalSubChoiceA")
         additionalSubChoice.style.display = "block";
     }
+    function showSubChoice1(){
+        const additionalSubChoice1 = document.getElementById("additionalSubChoiceB")
+        additionalSubChoice1.style.display = "block";
+    }
     function hideSubChoice(){
         document.getElementById("additionalSubChoiceA").style.display = "none";
         document.getElementById("response1.1").style.display = "none";
+    }
+    function hideSubChoice1(){
+        document.getElementById("additionalSubChoiceB").style.display = "none";
+        document.getElementById("response2.1").style.display = "none";
     }
     document.getElementById("continueButton0").addEventListener("click", function() {
         document.body.classList.add('leader-background');
@@ -290,6 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById("continueButton1").addEventListener("click", function() {
+        hideSubChoice1();
         hideOptionsAndResult2();
         showAdditionalOptions2();
         this.style.display = "none";
@@ -303,5 +343,9 @@ document.addEventListener('DOMContentLoaded', function() {
         showSubChoice();
         this.style.display = "none";
     });
-    
+    document.getElementById("continueSubChoiceButton1").addEventListener("click", function(){
+        hideOptionsAndResult2();
+        showSubChoice1();
+        this.style.display = "none";
+    })
 });

@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const startButton = document.getElementById('startButton');
+    const startScreen = document.getElementById('startScreen');
+    const gameContent = document.getElementById('centerBox');
+
+    startButton.addEventListener('click', function() {
+        startScreen.style.display = 'none';
+        gameContent.style.display = 'block';
+    });
+});
 let points = 0;
 let hearts = 3;
 
@@ -31,7 +41,7 @@ function loseHeart() {
         const heartContainer = document.getElementById("heartContainer");
         if (hearts >= 0) {
             const heartImages = heartContainer.querySelectorAll('.heart');
-            heartImages[hearts].style.display = "none"; // Hide one heart image
+            heartImages[hearts].style.display = "none"; 
         }
     }
     if (hearts === 0) {
@@ -48,8 +58,7 @@ function restartGame() {
 }
 
 function goToHomepage() {
-    // Redirect to homepage
-    window.location.href = "../index.html"; // Replace "homepage.html" with your actual homepage URL
+    window.location.href = "../index.html"; 
 }
 
 
@@ -222,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 30);
         document.getElementById("response1").style.fontSize = "30px";
-        document.getElementById("response1").style.fontFamily = "'VT323', monospace"; // Change the font family here
+        document.getElementById("response1").style.fontFamily = "'VT323', monospace";
     }
     
     function showResult2(result) {
@@ -237,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 30);
         document.getElementById("response2").style.fontSize = "30px";
-        document.getElementById("response2").style.fontFamily = "'VT323', monospace"; // Change the font family here
+        document.getElementById("response2").style.fontFamily = "'VT323', monospace"; 
     }
     
     function showResult3(result){
@@ -252,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 30);
         document.getElementById("response3").style.fontSize = "30px";
-        document.getElementById("response3").style.fontFamily = "'VT323', monospace"; // Change the font family here
+        document.getElementById("response3").style.fontFamily = "'VT323', monospace"; 
     }
     
     function showSubResult(result){

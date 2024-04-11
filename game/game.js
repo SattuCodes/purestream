@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } 
         if (choice.toLowerCase() === 'option3') {
             showResult2("You collaborate with the industries to implement eco-friendly practices, reducing pollution significantly.");
-            document.getElementById("continueButton1").style.display = "block";
+            document.getElementById("continueSubChoiceButton1").style.display = "block";
         } else {
             showResult2("You invest in a filtration system that provides clean water to the villagers, but the river remains polluted.");
             document.getElementById("continueButton1").style.display = "block";

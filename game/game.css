@@ -52,6 +52,12 @@ body {
     background-image: url('../asset/view\ 3.png');
     /* Add any additional styling you need */
 }
+.pollution-bg{
+    background-image: url('../asset/view\ 4\ polluted\ river.png');
+}
+.drought-bg{
+    background-image: url('../asset/view\ 5\ draught.png');
+}
 
 @keyframes colorChange {
     0% { color: rgb(0, 0, 0); }

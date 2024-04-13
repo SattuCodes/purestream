@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
     document.getElementById("additionalSubChoiceB").addEventListener("submit",  function(event){
-        event.preventDefault();
+        event.preventDefault();         
         const formData = new FormData(event.target);
         const choice = formData.get("additionalSubChoice1");
         console.log("Received choice:", choice);
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("additionalSubChoiceSubmitButton2").disabled = true;
         addPoints(choice);
         if (choice.toLowerCase() == 'option3.1'){
-            showSubResult2("1. **Reduce Water Usage**: Every drop counts. Use water-saving fixtures and harvest rainwater.2. **Proper Waste Disposal**: Dispose of hazardous waste properly to prevent contamination.3. **Natural Cleaning Products**: Use eco-friendly products to keep harmful chemicals out of our water.4. **Plant Trees**: Trees absorb pollutants and reduce runoff into water bodies.5. **Support Green Infrastructure**: Advocate for sustainable water management in our community.");
+            showSubResult2("1) Water-Saving Techniques:Turn Off Taps: Save 200 gallons a month by turning off the tap while brushing or shaving.Shorter Showers: Limit showers to 5 minutes to save water and energy.Fix Leaks: A single leak can waste thousands of litres per year.2) Rainwater Harvesting Methods:Barrels: Collect rainwater from rooftops in barrels for garden use.Dry System: Use large containers to collect rain during the wet season.Green Roof: Grow plants on rooftops to absorb rainwater and improve insulation.By adopting these practices, we can make a big difference in conserving water and securing our future.");
             document.getElementById("continueButton2").style.display = "block";
         }
         else{
@@ -371,7 +371,8 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.display = "none";
     });
     document.getElementById("continueButton").addEventListener("click", function() {
-        document.body.classList.remove('leader-background');    
+        document.body.classList.remove('leader-background'); 
+        document.body.classList.add('pollution-bg');
         hideSubChoice();
         hideOptionsAndResult1();
         showAdditionalOptions1();
@@ -379,6 +380,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById("continueButton1").addEventListener("click", function() {
+        document.body.classList.remove('pollution-bg');
+        document.body.classList.add('drought-bg')
         hideSubChoice1();
         hideOptionsAndResult2();
         showAdditionalOptions2();

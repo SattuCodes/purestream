@@ -5,13 +5,15 @@ body {
     align-items: center; /* Center vertically */
     height: 100vh; /* Set the body height to full viewport height */
     margin: 0; /* Remove default body margin */
+    background-color: #f3f3f3; /* Set a light background color */
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 500px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff; /* Set a white background color */
 }
 
 h2 {
@@ -29,15 +31,17 @@ label {
 
 input[type="text"],
 input[type="email"],
-textarea {
+textarea,
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 textarea {
-    resize: vertical;
+    resize: vertical; /* Allow vertical resizing of the textarea */
 }
 
 button {
@@ -54,6 +58,7 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
 .dark-mode {
     background-color: #222;
     color: #fff;

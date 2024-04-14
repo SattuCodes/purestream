@@ -25,7 +25,9 @@ body {
     justify-content: center;
     z-index: 9999; 
 }
-
+#startScreen p{
+    font-size: 35px;
+}
 @keyframes colorLoop {
     0% { color: white; }
     50% { color: yellow; }

@@ -56,7 +56,10 @@ body {
     background-image: url('../asset/view\ 4\ polluted\ river.png');
 }
 .drought-bg{
-    background-image: url('../asset/view\ 5\ draught.png');
+    background-image: url('../asset/better\ view\ 5.png');
+}
+.final-bg{
+    background-image: url('../asset/better\ view\ 2.png');
 }
 
 @keyframes colorChange {
@@ -151,7 +154,9 @@ body {
     display: flex;
     align-items: center;
 }
-
+#additionalSubChoice1{
+    text-align: left;
+}
 #heartContainer {
     display: inline-flex;
 }

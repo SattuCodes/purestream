@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("additionalSubChoiceSubmitButton1").disabled = true;
         addPoints(choice);
         if (choice.toLowerCase() == 'option2.1'){
-            showSubResult1("1. **Reduce Water Usage**: Every drop counts. Use water-saving fixtures and harvest rainwater.2. **Proper Waste Disposal**: Dispose of hazardous waste properly to prevent contamination.3. **Natural Cleaning Products**: Use eco-friendly products to keep harmful chemicals out of our water.4. **Plant Trees**: Trees absorb pollutants and reduce runoff into water bodies.5. **Support Green Infrastructure**: Advocate for sustainable water management in our community.");
+            showSubResult1("1. Reduce Water Usage: Every drop counts. Use water-saving fixtures and harvest rainwater.\n2.  Proper Waste Disposal : Dispose of hazardous waste properly to prevent contamination.\n3.  Natural Cleaning Products : Use eco-friendly products to keep harmful chemicals out of our water.\n4.  Plant Trees : Trees absorb pollutants and reduce runoff into water bodies.\n5.  Support Green Infrastructure : Advocate for sustainable water management in our community.");
             document.getElementById("continueButton1").style.display = "block";
         }
         else{
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("additionalSubChoiceSubmitButton2").disabled = true;
         addPoints(choice);
         if (choice.toLowerCase() == 'option3.1'){
-            showSubResult2("1) Water-Saving Techniques:Turn Off Taps: Save 200 gallons a month by turning off the tap while brushing or shaving.Shorter Showers: Limit showers to 5 minutes to save water and energy.Fix Leaks: A single leak can waste thousands of litres per year.2) Rainwater Harvesting Methods:Barrels: Collect rainwater from rooftops in barrels for garden use.Dry System: Use large containers to collect rain during the wet season.Green Roof: Grow plants on rooftops to absorb rainwater and improve insulation.By adopting these practices, we can make a big difference in conserving water and securing our future.");
+            showSubResult2("1) Water-Saving Techniques:Turn Off Taps: Save 200 gallons a month by turning off the tap while brushing or shaving.Shorter Showers: Limit showers to 5 minutes to save water and energy.Fix Leaks: A single leak can waste thousands of litres per year.\n2) Rainwater Harvesting Methods:Barrels: Collect rainwater from rooftops in barrels for garden use.Dry System: Use large containers to collect rain during the wet season.Green Roof: Grow plants on rooftops to absorb rainwater and improve insulation.By adopting these practices, we can make a big difference in conserving water and securing our future.");
             document.getElementById("continueButton2").style.display = "block";
         }
         else{
@@ -278,12 +278,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("response1.1").style.fontSize = "30px";
         document.getElementById("response1.1").style.fontFamily = "'VT323', monospace";
     }
-    function showSubResult1(result){
+    function showSubResult1(result) {
         document.getElementById("response2.1").innerHTML = "";
         let i = 0;
         const interval = setInterval(function() {
             if (i < result.length) {
-                document.getElementById("response2.1").innerHTML += result[i];
+                if (result[i] === '\n') {
+                    document.getElementById("response2.1").innerHTML += "<br>";
+                } else {
+                    document.getElementById("response2.1").innerHTML += result[i];
+                }
                 i++;
             } else {
                 clearInterval(interval);
@@ -292,19 +296,24 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("response2.1").style.fontSize = "30px";
         document.getElementById("response2.1").style.fontFamily = "'VT323', monospace";
     }
-    function showSubResult2(result){
+    
+    function showSubResult2(result) {
         document.getElementById("response3.1").innerHTML = "";
         let i = 0;
         const interval = setInterval(function() {
             if (i < result.length) {
-                document.getElementById("response3.1").innerHTML += result[i];
+                if (result[i] === '\n') {
+                    document.getElementById("response3.1").innerHTML += "<br>";
+                } else {
+                    document.getElementById("response3.1").innerHTML += result[i];
+                }
                 i++;
             } else {
                 clearInterval(interval);
             }
         }, 30);
-        document.getElementById("response3.1").style.fontSize = "30px";
-        document.getElementById("response3.1").style.fontFamily = "'VT323', monospace";
+        document.getElementById("response2.1").style.fontSize = "30px";
+        document.getElementById("response2.1").style.fontFamily = "'VT323', monospace";
     }
     function hideOptionsAndResult() {
         document.getElementById("msg1").style.display = "none";
@@ -372,6 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.getElementById("continueButton").addEventListener("click", function() {
         document.body.classList.remove('leader-background'); 
+        document.body.classList.remove('final-bg');
         document.body.classList.add('pollution-bg');
         hideSubChoice();
         hideOptionsAndResult1();
@@ -381,19 +391,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById("continueButton1").addEventListener("click", function() {
         document.body.classList.remove('pollution-bg');
-        document.body.classList.add('drought-bg')
+        document.body.classList.add('drought-bg');
         hideSubChoice1();
         hideOptionsAndResult2();
         showAdditionalOptions2();
         this.style.display = "none";
     });
-
     document.getElementById("continueButton2").addEventListener("click", function() {
+        document.body.classList.remove('drought-bg');
+        document.body.classList.add('final-bg');
         hideSubChoice2();
         this.style.display = "none";
     });
     
     document.getElementById("continueSubChoiceButton").addEventListener("click", function() {
+        document.body.classList.remove('leader-background');
+        document.body.classList.add('final-bg');
         hideOptionsAndResult1();
         showSubChoice();
         this.style.display = "none";

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PureStream - Save Water</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureStream - Save Water</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="asset/wired-outline-447-water-drop.gif">
 </head>
 <body>
   <header>
@@ -18,7 +19,7 @@
         <ul class="navbar">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="complaint/complaint.html">Complaint</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -31,22 +32,25 @@
     </section>
     <section id="water-conservation">
       <h3>Save Water</h3>
-      <p>Water is precious! Learn about ways to conserve water and protect our water resources.</p>
-      <p>"In an era where freshwater resources are increasingly strained, the imperative to conserve water has never been more urgent. Each droplet saved represents a vital contribution to the preservation of our planet's most precious resource. From the simple act of fixing leaky faucets to embracing innovative water-saving technologies, every individual has the power to make a significant difference. By adopting mindful water consumption habits, such as taking shorter showers, using water-efficient appliances, and practicing responsible irrigation techniques, we can collectively alleviate the strain on our finite water supplies. Saving water isn't just about preserving a vital resource for future generations; it's about safeguarding ecosystems, promoting sustainability, and ensuring equitable access to clean water for all. Together, let us embark on a journey to protect and conserve this invaluable resource for the well-being of our planet and its inhabitants."</p>
+      <p id="imp"><b>Water is precious! </b>Learn about ways to conserve water and protect our water resources.</p>
+      <p id="para">In an era of strained freshwater resources, conservation is urgent. Let's save water for sustainability and equitable access.</p>
+      <p id="game">PureStream offers you a interactive game which helps you understand how to save water and the preciousness of water | <b>Click below to play the game</b></p>
     <div class="button-container">
-      <button onclick="loadGame()">
+      <button id="gameClick" onclick="loadGame()">
         Click here to Play!
       </button>
     </div>
   </section>
-
+  <section id="complaint">
+    <h3>Complaint</h3>
+    <p id="main">Do you want to register any complaint regarding water problems?</p>
+    <p id="txt">PureStream offers you to register a complaint which will be directly sent to the officials in the provided area by you! <br> <button onclick="loadComplaint()">Register a Complaint</button></p>
+  </section>
   <section id="sanitation">
     <h2>Proper Sanitation</h2>
     <p>Proper sanitation is essential for public health. Discover how to maintain clean and hygienic environments.</p>
-    <a href="sanitation_info.html">Learn More</a>
   </section>
 </main>
-
 <footer>
   <p>&copy; 2024 PureStream</p>
 </footer>

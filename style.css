@@ -1,186 +1,160 @@
-/*CUSTOM CSS */
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 
-/* Body styles */
 body {
-    font-family: Arial, sans-serif; /* Default font family */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-attachment: fixed; /* Fix background image */
-    background-size: cover; /* Cover entire viewport */
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('asset/banner.jpg'); /* Background gradient and image */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('asset/banner.jpg');
 }
 
-/* Header styles */
 header {
-    color: #fff; /* Text color */
-    padding: 0px; /* Padding */
-    text-align: center; /* Center align text */
-    position: relative; /* Relative positioning */
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    position: relative;
 }
 
-/* Container for logo and navbar */
-.logo-nav-container {
-    display: flex; /* Flex container */
-    justify-content: space-between; /* Space between logo and navbar */
-    align-items: center; /* Center items vertically */
-}
-.logo-gif{
-    width: 30%;
+.logo-container {
+    margin-left: 20px;
+    display: inline-block;
 }
 
-/* Navbar styles */
+.logo-gif {
+    width: 50%;
+}
+
 .navbar {
-    list-style-type: none; /* Remove list style */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    overflow: hidden; /* Hide overflowing content */
-    background-color: transparent; /* Transparent background */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Font family */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
-/* Pseudo-elements for navbar */
-.navbar::before,
-.navbar::after {
-    content: ''; /* Empty content */
-    display: block; /* Block element */
-    position: absolute; /* Absolute positioning */
-    left: 0; /* Position from left */
-    width: 100%; /* Full width */
-    height: 2px; /* Adjust the height of the lines */
-    background-color: #000; /* Line color */
-}
-
-/* Positioning of pseudo-element before navbar */
-.navbar::before {
-    top: 0; /* Position from top */
-}
-
-/* Positioning of pseudo-element after navbar */
-.navbar::after {
-    bottom: 0; /* Position from bottom */
-}
-
-/* Navbar list item styles */
 .navbar li {
-    float: left; /* Float left */
-    margin-right: 10px; /* Adjust margin for spacing between buttons */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-right: 50px;
 }
 
-/* Style for last navbar list item */
 .navbar li:last-child {
-    margin-right: 15px; /* Remove margin from the last button to prevent extra spacing */
+    margin-right: 0;
 }
 
-/* Navbar link styles */
 .navbar li a {
-    display: block; /* Block element */
-    color: white; /* Text color */
-    text-align: center; /* Center align text */
-    padding: 14px 20px; /* Padding */
-    text-decoration: none; /* Remove underline */
-    border: 3px solid; /* Border */
-    border-radius: 5px; /* Rounded corners */
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 
-/* Navbar link hover styles */
 .navbar li a:hover {
-    background-color: #fff; /* Background color on hover */
-    border: 3px solid; /* Border color on hover */
-    color: black; /* Text color on hover */
-    border-color: #000000; /* Border color on hover */
-    transition: .5s; /* Transition effect */
+    background-color: #fff;
+    border: 3px solid;
+    color: black;
+    border-color: #000000;
+    transition: .1s;
+    border-radius: 10%;
 }
 
-/* Main section styles */
 main {
-    padding: 20px; /* Padding */
-    background-color: rgba(255, 255, 255, 0.8); /* Background color */
-    margin-top: 20px; /* Margin from top */
-    margin-bottom: 20px; /* Margin from bottom */
-    border-radius: 10px; /* Rounded corners */
-    margin-left: 20px; /* Margin from left */
-    margin-right: 20px; /* Margin from right */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-/* UNDP section styles */
 #undp {
-    display: flex; /* Flex container */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    align-items: center;
 }
 
-/* UNDP image styles */
 #undp img {
-    width: 150px; /* Width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Margin from right */
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
 }
 
-/* UNDP heading styles */
 #undp h3 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
-/* UNDP link styles */
 #undp a {
-    display: flex; /* Flex container */
-    align-items: center; /* Align items vertically */
-    text-decoration: none; /* Remove underline */
-    color: black; /* Text color */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
 }
 
-/* Section styles */
 section {
-    margin-bottom: 40px; /* Margin from bottom */
+    margin-bottom: 40px;
 }
 
-/* Button container styles */
 .button-container {
-    display: flex; /* Flex container */
-    justify-content: center; /* Center justify content */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Button styles */
-button {
-    border: none; /* No border */
-    padding: 10px 10px; /* Padding */
-    font-size: 50px; /* Font size */
-    background: transparent; /* Transparent background */
-    color: #1500ff; /* Text color */
-    text-transform: uppercase; /* Uppercase text */
-    border: 5px solid #4000ff; /* Border */
-    cursor: pointer; /* Cursor pointer */
-    transition: all 0.7s; /* Transition effect */
-    overflow: hidden; /* Hide overflowing content */
-    border-radius: 30px; /* Rounded corners */
-    font-weight: bold; /* Bold font weight */
-    font-family: 'Honk', sans-serif; /* Custom font family */
+#gameClick {
+    border: none;
+    padding: 10px 10px;
+    font-size: 50px;
+    background: transparent;
+    color: #1500ff;
+    text-transform: uppercase;
+    border: 5px solid #4000ff;
+    cursor: pointer;
+    transition: all 0.7s;
+    overflow: hidden;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Honk', sans-serif;
 }
 
-/* Water conservation section styles */
 #water-conservation {
-    background-color: #39CCCC; /* Background color */
-    color: #fff; /* Text color */
-    padding: 20px; /* Padding */
-    border-radius: 10px; /* Rounded corners */
-    margin: 20px 0; /* Margin */
+    background-color: #39CCCC;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
-/* Water conservation heading styles */
-#water-conservation h2 {
-    font-family: 'Arial', sans-serif; /* Font family */
+#water-conservation h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+}
+#imp{
+    font-size: 25px;
+}
+#para {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+@keyframes colorLoop {
+    0% { color: white; }
+    50% { color: rgb(255, 0, 0); }
+    100% { color: white; }
+}
+#game{
+    font-size: 20px;
+    animation: colorLoop 2s infinite;
 }
 
-/* Water conservation paragraph styles */
-#water-conservation p {
-    font-family: 'Arial', sans-serif; /* Font family */
-}
-
-/* Footer styles */
 footer {
-    background-color: #f8f9fa; /* Background color */
-    padding: 10px; /* Padding */
-    text-align: center; /* Center align text */
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
 }

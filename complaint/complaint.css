@@ -54,3 +54,20 @@ button {
 button:hover {
     background-color: #45a049;
 }
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Dark mode button styles */
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

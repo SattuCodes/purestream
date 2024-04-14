@@ -90,7 +90,10 @@ body {
 #continueButton0,
 #continueButton,
 #continueButton1,
-#continueButton2 {
+#continueButton2,
+#continueSubChoiceButton,
+#continueSubChoiceButton1,
+#continueSubChoiceButton2{
     display: block;
     font-family: "VT323", monospace;
     margin: 20px auto;
@@ -155,6 +158,9 @@ body {
     align-items: center;
 }
 #additionalSubChoice1{
+    text-align: left;
+}
+#additionalSubChoice2{
     text-align: left;
 }
 #heartContainer {

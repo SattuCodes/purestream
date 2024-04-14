@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     const startButton = document.getElementById('startButton');
     const startScreen = document.getElementById('startScreen');
     const gameContent = document.getElementById('centerBox');
@@ -378,6 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hideOptionsAndResult();
         showAdditionalOptions();
         this.style.display = "none";
+        checkFinalResult();
     });
     document.getElementById("continueButton").addEventListener("click", function() {
         document.body.classList.remove('leader-background'); 
@@ -387,21 +389,25 @@ document.addEventListener('DOMContentLoaded', function() {
         hideOptionsAndResult1();
         showAdditionalOptions1();
         this.style.display = "none";
+        checkFinalResult();
     });
-
     document.getElementById("continueButton1").addEventListener("click", function() {
         document.body.classList.remove('pollution-bg');
+        document.body.classList.remove('final-bg');
         document.body.classList.add('drought-bg');
         hideSubChoice1();
         hideOptionsAndResult2();
         showAdditionalOptions2();
         this.style.display = "none";
+        checkFinalResult();
     });
     document.getElementById("continueButton2").addEventListener("click", function() {
         document.body.classList.remove('drought-bg');
         document.body.classList.add('final-bg');
         hideSubChoice2();
         this.style.display = "none";
+        checkFinalResult();
+        displayTotalScore();
     });
     
     document.getElementById("continueSubChoiceButton").addEventListener("click", function() {
@@ -410,15 +416,43 @@ document.addEventListener('DOMContentLoaded', function() {
         hideOptionsAndResult1();
         showSubChoice();
         this.style.display = "none";
+        checkFinalResult();
     });
     document.getElementById("continueSubChoiceButton1").addEventListener("click", function(){
+        document.body.classList.remove('pollution-bg');
+        document.body.classList.add('final-bg');
         hideOptionsAndResult2();
         showSubChoice1();
         this.style.display = "none";
+        checkFinalResult();
     })
     document.getElementById("continueSubChoiceButton2").addEventListener("click", function(){
         showSubChoice2();
         hideOptionsAndResult3();
         this.style.display = "none";
+        checkFinalResult();
     })
+    function checkFinalResult() {
+        if (hearts === 0 && document.getElementById("additionalSubmitButton").disabled &&
+            document.getElementById("additionalSubmitButton1").disabled &&
+            document.getElementById("additionalSubmitButton2").disabled &&
+            document.getElementById("additionalSubChoiceSubmitButton").disabled &&
+            document.getElementById("additionalSubChoiceSubmitButton1").disabled &&
+            document.getElementById("additionalSubChoiceSubmitButton2").disabled) {
+            displayTotalScore();
+        }
+    }
+    function displayTotalScore() {
+        const totalScore = points;
+        document.getElementById('totalScore').textContent = `Total Score: ${totalScore}`;
+        document.getElementById('finalResult').style.display = 'block';
+        document.getElementById("restartButton0").addEventListener("click", resGame);
+        document.getElementById("homepageButton0").addEventListener("click", goHome);
+    }
+    function resGame() {
+        window.location.reload();
+    }
+    function goHome() {
+        window.location.href = "../index.html"; 
+    }
 });

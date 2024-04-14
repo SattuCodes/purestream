@@ -1,11 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Set the body height to full viewport height */
-    margin: 0; /* Remove default body margin */
-    background-color: #f3f3f3; /* Set a light background color */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    background-color: #f3f3f3; 
+    transition: background-color 0.3s; 
+}
+
+.dark-mode {
+    background-color: #222; 
+    color: #fff; 
 }
 
 .container {
@@ -13,7 +19,13 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff; /* Set a white background color */
+    background-color: #fff;
+    transition: background-color 0.3s; 
+}
+
+.dark-mode .container {
+    background-color: #333;
+    color: #fff; 
 }
 
 h2 {
@@ -41,7 +53,7 @@ select {
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing of the textarea */
+    resize: vertical; 
 }
 
 button {
@@ -59,12 +71,6 @@ button:hover {
     background-color: #45a049;
 }
 
-.dark-mode {
-    background-color: #222;
-    color: #fff;
-}
-
-/* Dark mode button styles */
 #dark-mode-toggle {
     position: fixed;
     top: 10px;

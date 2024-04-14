@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* Make sure it's on top of other elements */
+    z-index: 9999; 
 }
 
 @keyframes colorLoop {
@@ -48,9 +48,7 @@ body {
     cursor: pointer;
 }
 .leader-background {
-    /* Background image when leader option appears */
     background-image: url('../asset/view\ 3.png');
-    /* Add any additional styling you need */
 }
 .pollution-bg{
     background-image: url('../asset/view\ 4\ polluted\ river.png');
@@ -116,13 +114,32 @@ body {
     cursor: pointer;
     border: none;
 }
-
+#additionalSubChoiceSubmitButton,
+#additionalSubChoiceSubmitButton1,
+#additionalSubChoiceSubmitButton2{
+    font-family: "VT323", monospace;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+}
 #centerBox h1, #centerBox p {
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: xx-large ;
 }
-
+#restartButton,
+#restartButton0,
+#homepageButton,
+#homepageButton0{
+    font-family: "VT323", monospace;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+}
 
 #gameForm {
     text-align: left;

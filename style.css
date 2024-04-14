@@ -163,6 +163,9 @@ section {
     text-align: center;
     font-size: 50px;
 }
+#complaint p{
+    font-size: 25px;
+}
 #comBtn{
     border: none;
     padding: 10px 10px;

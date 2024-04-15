@@ -23,7 +23,10 @@ The objective of Water Quest is to spread awareness about SDG6, which aims to en
 - Educational content about water conservation and sanitation.
 - Multiple endings based on player choices.
 - Resources and tips for players to implement SDG6 in their daily lives.
-
+  
+## Requirements
+- This game is made for devices with 1920*1080 resolution! PLEASE CHECK YOUR RESOLUTION BEFORE PLAYING!
+  
 ## Installation
 To play Water Quest, follow these steps:
 1. Download the game files from the repository.

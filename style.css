@@ -1,204 +1,251 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* General styling for the body */
 body {
-    font-family: "Special Elite", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('asset/banner.jpg');
+    font-family: "Special Elite", system-ui; /* Setting font family */
+    font-weight: 400; /* Setting font weight */
+    font-style: normal; /* Setting font style */
+    margin: 0; /* Removing default margins */
+    padding: 0; /* Removing default padding */
+    background-repeat: no-repeat; /* Preventing background image from repeating */
+    background-attachment: fixed; /* Fixing the background image */
+    background-size: cover; /* Making sure the background image covers the entire screen */
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('asset/banner.jpg'); /* Setting background image */
 }
 
+/* Styling for the header */
 header {
-    color: #fff;
-    padding: 0px;
-    text-align: center;
-    position: relative;
+    color: #fff; /* Setting text color */
+    padding: 0px; /* Setting padding */
+    text-align: center; /* Centering text */
+    position: relative; /* Setting position */
 }
 
+/* Styling for the logo container */
 .logo-container {
-    margin-left: 20px;
-    display: inline-block;
+    margin-left: 20px; /* Adding margin */
+    display: inline-block; /* Displaying as inline block */
 }
 
+/* Styling for the logo gif */
 .logo-gif {
-    width: 50%;
+    width: 50%; /* Setting width */
 }
 
+/* Styling for the navbar */
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
+    list-style-type: none; /* Removing default list style */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    overflow: hidden; /* Handling overflow */
+    background-color: transparent; /* Setting background color */
+    display: flex; /* Using flexbox */
+    justify-content: center; /* Centering items horizontally */
+    font-size: 18px; /* Setting font size */
 }
 
+/* Styling for navbar list items */
 .navbar li {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    float: left;
-    margin-right: 50px;
+    text-align: center; /* Centering text */
+    display: flex; /* Using flexbox */
+    align-items: center; /* Aligning items vertically */
+    float: left; /* Floating to left */
+    margin-right: 50px; /* Adding margin */
 }
 
+/* Styling for last navbar list item */
 .navbar li:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Removing margin */
 }
 
+/* Styling for navbar links */
 .navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
+    display: block; /* Displaying as block element */
+    color: white; /* Setting text color */
+    text-align: center; /* Centering text */
+    padding: 14px 20px; /* Adding padding */
+    text-decoration: none; /* Removing text decoration */
 }
 
+/* Styling for navbar link hover */
 .navbar li a:hover {
-    background-color: #fff;
-    border: 3px solid;
-    color: black;
-    border-color: #000000;
-    transition: .1s;
-    border-radius: 10%;
+    background-color: #fff; /* Setting background color on hover */
+    border: 3px solid; /* Adding border */
+    color: black; /* Changing text color */
+    border-color: #000000; /* Setting border color */
+    transition: .1s; /* Adding transition effect */
+    border-radius: 10%; /* Adding border radius */
 }
 
+/* Styling for main content */
 main {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 20px; /* Adding padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Setting background color with opacity */
+    margin-top: 20px; /* Adding margin */
+    margin-bottom: 20px; /* Adding margin */
+    border-radius: 10px; /* Adding border radius */
+    margin-left: 20px; /* Adding margin */
+    margin-right: 20px; /* Adding margin */
 }
 
+/* Styling for UNDP section */
 #undp {
-    display: flex;
-    align-items: center;
+    display: flex; /* Using flexbox */
+    align-items: center; /* Aligning items vertically */
 }
 
+/* Styling for UNDP image */
 #undp img {
-    width: 150px;
-    height: auto;
-    margin-right: 10px;
+    width: 150px; /* Setting width */
+    height: auto; /* Setting height */
+    margin-right: 10px; /* Adding margin */
 }
 
+/* Styling for UNDP heading */
 #undp h3 {
-    margin: 0;
+    margin: 0; /* Removing margin */
 }
 
+/* Styling for UNDP link */
 #undp a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
+    display: flex; /* Using flexbox */
+    align-items: center; /* Aligning items vertically */
+    text-decoration: none; /* Removing text decoration */
+    color: black; /* Setting text color */
 }
 
+/* Styling for sections */
 section {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Adding margin */
 }
 
+/* Styling for button container */
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Using flexbox */
+    justify-content: center; /* Centering items horizontally */
+    align-items: center; /* Aligning items vertically */
 }
 
+/* Styling for game click button */
 #gameClick {
-    border: none;
-    padding: 10px 10px;
-    font-size: 50px;
-    background: transparent;
-    text-transform: uppercase;
-    border: 5px solid #e7a8a8;
-    cursor: pointer;
-    transition: all 0.7s;
-    overflow: hidden;
-    border-radius: 30px;
-    font-weight: bold;
-    font-family: 'Honk', sans-serif;
+    border: none; /* Removing border */
+    padding: 10px 10px; /* Adding padding */
+    font-size: 50px; /* Setting font size */
+    background: transparent; /* Setting background to transparent */
+    text-transform: uppercase; /* Transforming text to uppercase */
+    border: 5px solid #e7a8a8; /* Adding border */
+    cursor: pointer; /* Changing cursor on hover */
+    transition: all 0.7s; /* Adding transition effect */
+    overflow: hidden; /* Handling overflow */
+    border-radius: 30px; /* Adding border radius */
+    font-weight: bold; /* Setting font weight */
+    font-family: 'Honk', sans-serif; /* Setting font family */
 }
 
+/* Styling for water conservation section */
 #water-conservation {
-    background-color: #39CCCC;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
+    background-color: #39CCCC; /* Setting background color */
+    color: #fff; /* Setting text color */
+    padding: 20px; /* Adding padding */
+    border-radius: 10px; /* Adding border radius */
+    margin: 10px 0; /* Adding margin */
 }
 
+/* Styling for water conservation heading */
 #water-conservation h3 {
-    text-align: center;
-    font-size: 50px;
+    text-align: center; /* Centering text */
+    font-size: 50px; /* Setting font size */
 }
-#imp{
-    font-size: 25px;
+
+/* Styling for important text */
+#imp {
+    font-size: 25px; /* Setting font size */
 }
+
+/* Styling for paragraph */
 #para {
-    font-size: 25px;
+    font-size: 25px; /* Setting font size */
 }
+
+/* Animation for color loop */
 @keyframes colorLoop {
-    0% { color: white; }
-    50% { color: rgb(255, 0, 0); }
-    100% { color: white; }
+    0% { color: white; } /* Starting color white */
+    50% { color: rgb(255, 0, 0); } /* Midpoint color red */
+    100% { color: white; } /* Ending color white */
 }
-#game{
-    font-size: 25px;
-    animation: colorLoop 2s infinite;
+
+/* Styling for game section */
+#game {
+    font-size: 25px; /* Setting font size */
+    animation: colorLoop 2s infinite; /* Applying color loop animation */
 }
+
+/* Styling for complaint section */
 #complaint {
-    background-color: #39CCCC;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
+    background-color: #39CCCC; /* Setting background color */
+    color: #fff; /* Setting text color */
+    padding: 20px; /* Adding padding */
+    border-radius: 10px; /* Adding border radius */
+    margin: 10px 0; /* Adding margin */
 }
-#complaint h3{
-    text-align: center;
-    font-size: 50px;
+
+/* Styling for complaint heading */
+#complaint h3 {
+    text-align: center; /* Centering text */
+    font-size: 50px; /* Setting font size */
 }
-#complaint p{
-    font-size: 25px;
+
+/* Styling for complaint paragraph */
+#complaint p {
+    font-size: 25px; /* Setting font size */
 }
-#comBtn{
-    border: none;
-    padding: 10px 10px;
-    font-size: 30px;
-    background: transparent;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.7s;
-    overflow: hidden;
-    border-radius: 30px;
-    font-weight: bold;
-    font-family: "Special Elite", system-ui;
+
+/* Styling for complaint button */
+#comBtn {
+    border: none; /* Removing border */
+    padding: 10px 10px; /* Adding padding */
+    font-size: 30px; /* Setting font size */
+    background: transparent; /* Setting background to transparent */
+    text-transform: uppercase; /* Transforming text to uppercase */
+    cursor: pointer; /* Changing cursor on hover */
+    transition: all 0.7s; /* Adding transition effect */
+    overflow: hidden; /* Handling overflow */
+    border-radius: 30px; /* Adding border radius */
+    font-weight: bold; /* Setting font weight */
+    font-family: "Special Elite", system-ui; /* Setting font family */
 }
-#comBtn:hover{
-    color: white;
-    background-color: #222222d8;
+
+/* Styling for complaint button hover */
+#comBtn:hover {
+    color: white; /* Changing text color on hover */
+    background-color: #222222d8; /* Setting background color on hover */
 }
+
+/* Styling for sanitation section */
 #sanitation {
-    background-color: #39CCCC;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
+    background-color: #39CCCC; /* Setting background color */
+    color: #fff; /* Setting text color */
+    padding: 20px; /* Adding padding */
+    border-radius: 10px; /* Adding border radius */
+    margin: 10px 0; /* Adding margin */
 }
-#sanitation h2{
-    text-align: center;
-    font-size: 50px;
+
+/* Styling for sanitation heading */
+#sanitation h2 {
+    text-align: center; /* Centering text */
+    font-size: 50px; /* Setting font size */
 }
-#sanitation p{
-    font-size: 25px;
+
+/* Styling for sanitation paragraph */
+#sanitation p {
+    font-size: 25px; /* Setting font size */
 }
+
+/* Styling for the footer */
 footer {
-    background-color: #f8f9fa;
-    padding: 10px;
-    text-align: center;
+    background-color: #f8f9fa; /* Setting background color */
+    padding: 10px; /* Adding padding */
+    text-align: center; /* Centering text */
 }

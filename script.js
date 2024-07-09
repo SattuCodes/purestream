@@ -453,6 +453,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.reload();
     }
     function goHome() {
-        window.location.href = "../index.html"; 
+        window.location.href = "index.html"; 
     }
 });

@@ -6,7 +6,7 @@ body {
     font-family: "VT323", monospace; /* Using VT323 font */
     font-size: x-large; /* Setting font size to x-large */
     letter-spacing: 2px; /* Adding letter spacing */
-    background-image: url('../asset/better\ view\ 2.png'); /* Setting background image */
+    background-image: url('asset/better\ view\ 2.png'); /* Setting background image */
     background-size: cover; /* Making sure the background image covers the entire screen */
     margin: 0; /* Removing default margins */
     padding: 0; /* Removing default padding */
@@ -63,16 +63,16 @@ body {
 
 /* Styling for specific backgrounds */
 .leader-background {
-    background-image: url('../asset/view\ 3.png'); /* Setting specific background image */
+    background-image: url('asset/view\ 3.png'); /* Setting specific background image */
 }
 .pollution-bg{
-    background-image: url('../asset/view\ 4\ polluted\ river.png'); /* Setting specific background image */
+    background-image: url('asset/view\ 4\ polluted\ river.png'); /* Setting specific background image */
 }
 .drought-bg{
-    background-image: url('../asset/better\ view\ 5.png'); /* Setting specific background image */
+    background-image: url('asset/better\ view\ 5.png'); /* Setting specific background image */
 }
 .final-bg{
-    background-image: url('../asset/better\ view\ 2.png'); /* Setting specific background image */
+    background-image: url('asset/better\ view\ 2.png'); /* Setting specific background image */
 }
 
 /* Animation for color change */

@@ -42,7 +42,4 @@ We welcome contributions to improve the game and expand its educational content.
 
 Thank you for playing PureStream and joining the effort to achieve SDG6!
 
-Made by:- 
-1. Satyam Tiwari (coding and logic)
-2. Jia Jain (UI/UX, game designing)
 
